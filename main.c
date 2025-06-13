@@ -89,7 +89,10 @@ int main()
                         // 电量 30% ~ 40%，设置电流为 8,000,000 µA（8A），约 40W（5V x 8A）
                         control_charge_speed("/sys/class/power_supply/battery/constant_charge_current", 8000000);
                         break;
-                        case 4...7:
+                        case 4:
+                        case 5:
+                        case 6:
+                        case 7:
                         // 电量 50% ~ 80%，设置电流为 7,500,000 µA（7.5A），约 37W（5V x 7.5A）
                         control_charge_speed("/sys/class/power_supply/battery/constant_charge_current", 7500000);
                         break;
